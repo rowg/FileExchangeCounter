@@ -22,7 +22,7 @@ A more insidious problem occurs when an incorrect setting or configuration in Se
 Situations like these can degrade system performance and greatly increase the cost of data transfers if the remote computers are on cellular or satellite links. The operator is unlikely to notice, though, as there are no gaps in the incoming data to indicate a problem with the file transfers. Your first indication of a problem may be (as it was in my case) an email from Accounting asking why your cellular bill has suddenly doubled.
 
 ## The Output
-The output from the FileExchangeCounter scripts is twofold. First, ASCII log files, one for each radial station/file type combination are generated. These contain lines of text, each containing a datestamp string and an integer indicating the number of files were transferred on the corresponding day.
+The output from the FileExchangeCounter scripts is twofold. First, ASCII log files, one for each radial station/file type combination are generated. These contain lines of text, each containing a datestamp string and an integer indicating the number of files that were transferred on the corresponding day.
 
 The second thing output by the FileExchangeCounter scripts is an html file. When viewed in a Web browser, it displays a table with one row for each radial station and a column for each data file type. See the image file *FileExchangeCounterScreenshot.png*, included in this repo, for an example.
 
@@ -38,7 +38,7 @@ First, station *VCOL* is falling behind, with only 18 CSS files and 15 .png file
 
 Second, station *VGPT* is also falling behind. Again, this is not a surprise, though this time the culprit was a power outage at the site.
 
-Third, all the stations (apart from *VGPT*, which was operating only part of the day) have transferred about *four times* as many Range Series files than expected. This turned out to be an incorrect setting in Archivalist, which has since been fixed. 
+Third, all the stations (apart from *VGPT*, which was operating only part of the day) have transferred about *four times* as many Range Series files than expected. This turned out to be due to an incorrect setting in Archivalist, which has since been fixed. 
 
 ## Requirements
 The scripts assume that the Combiner computer has FileExchange log files in the /Codar/SeaSonde/Logs/FileExchangeLogs/ directory, with names of the form *Site5_VGPT_Rads_ssh_2019-02.log* (with *VATK* being a station name, *Rads* a file type, and a *yyyy-mm* (year-month) datestring as the last element of the filename before the *.log* extension. If your files follow a different filenaming convention, you may need to modify the code slightly.
