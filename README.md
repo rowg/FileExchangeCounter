@@ -34,7 +34,7 @@ The second thing output by the FileExchangeCounter scripts is an html file. When
 
 In a given day, you might expect 24 .ruv files, 24 .png files, approximately 144 CSS files, and approximately 338 RangeSeries files to be transferred from a particular radial station. With these numbers in mind, a look at the table in *FileExchangeCounterScreenshot.png* reveals three problems with Ocean Networks Canada's CODAR systems. 
 
-First, station *VCOL* is falling behind, with only 18 CSS files and 15 .png files (in the "Figs" column) transferred rather than the expected 24 of each. This is not unexpected, as *VCOL* is known to be experiencing communications problems.
+First, station *VCOL* is falling behind, with only 18 CSS files and 15 .png files (in the "Figs" column) transferred rather than the expected 24 of each. This is not surprising, as *VCOL* is known to be experiencing communications problems.
 
 Second, station *VGPT* is also falling behind. Again, this is not a surprise, though this time the culprit was a power outage at the site.
 
