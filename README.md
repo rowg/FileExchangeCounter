@@ -48,7 +48,7 @@ The scripts make use of an environment variable called "LOGPATH", which defines 
 ## Set up
 Edit your *crontab* to have the following line (modify the value of LOGPATH and the path to the script as required):
 
-    0  1 * * *    export LOGPATH=/Users/kpb/myLogs/; /Users/kpb/myScripts/daily_filexch_counter.sh > $LOGPATH/daily_filexch_counter.log 2>&1
+    0  1 * * *    export LOGPATH=/Users/codar/myLogs/; /Users/codar/myScripts/daily_filexch_counter.sh > $LOGPATH/daily_filexch_counter.log 2>&1
     
 *daily_filexch_counter.sh* will now run automatically at 01:00 a.m. every day and generate a file named *daily_filexch_counter_summary.html* in the directory given by LOGPATH. 
 
