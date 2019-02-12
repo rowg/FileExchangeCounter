@@ -26,7 +26,9 @@ The output from the FileExchangeCounter scripts is twofold. First, ASCII log fil
 
 The second thing output by the FileExchangeCounter scripts is an html file. When viewed in a Web browser, it displays a table with one row for each radial station and a column for each data file type. See the image file *FileExchangeCounterScreenshot.png*, included in this repo, for an example.
 
-![Screenshot of FileExchangeCounter html table](./FileExchangeCounterScreenshot.png?raw=true "Title")
+---
+![Screenshot of FileExchangeCounter html table](./FileExchangeCounterScreenshot.png?raw=true "Screenshot of FileExchangeCounter html table")
+---
 
 In a given day, you might expect 24 .ruv files, 24 .png files, approximately 144 CSS files, and approximately 338 RangeSeries files to be transferred from a particular radial station. With these numbers in mind, a look at the table in *FileExchangeCounterScreenshot.png* reveals three problems with Ocean Networks Canada's CODAR systems. 
 
