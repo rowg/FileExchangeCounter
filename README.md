@@ -38,7 +38,7 @@ First, station *VCOL* is falling behind, with only 18 CSS files and 15 .png file
 
 Second, station *VGPT* is also falling behind. Again, this is not a surprise, though this time the culprit was a power outage at the site.
 
-Third, all the stations (apart from *VGPT*, which was operating only part of the day) have transferred about *four times* as many Range Series files than expected. This turned out to be due to an incorrect setting in Archivalist, which has since been fixed. 
+Third, all the stations (apart from *VGPT*, which was operating only part of the day) have transferred about *four times* as many Range Series files as expected. This turned out to be due to an incorrect setting in Archivalist, which has since been fixed. 
 
 ## Requirements
 The scripts assume that the Combiner computer has FileExchange log files in the /Codar/SeaSonde/Logs/FileExchangeLogs/ directory, with names of the form *Site5_VGPT_Rads_ssh_2019-02.log* (with *VATK* being a station name, *Rads* a file type, and a *yyyy-mm* (year-month) datestring as the last element of the filename before the *.log* extension. If your files follow a different filenaming convention, you may need to modify the code slightly.
