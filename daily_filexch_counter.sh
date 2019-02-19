@@ -25,6 +25,14 @@
 #   currDate=$(date -v +1d -j -f "%Y%m%d" $currDate "+%Y%m%d");
 # done
 #
+# Note: there appears to be a bug in the filexch_ssh.pl script that
+# can result in an inaccurate value appearing in the number of 
+# files transferred in the log file. This inaccurate value is used 
+# this script. The problem appears to arise when there is an
+# empty string in the field corresponding to the <FilesBeginWith>
+# key in a FileExchange .plist file. Workaround: never have an
+# empty value for <FilesBeginWith>.
+#
 # 2019-02-09 20:03:44 GMT--kpb@uvic.ca
 ################################################################
 
@@ -34,6 +42,8 @@
 # 2019-02-09, kpb--Created.
 #
 # 2019-02-10, kpb--Added html generation.
+#
+# 2019-02-19, kpb--Added note about filexch_ssh.pl bug and workaround.
 #
 ################################################################
 
