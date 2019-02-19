@@ -53,3 +53,8 @@ Edit your *crontab* to have the following line (modify the value of LOGPATH and 
 *daily_filexch_counter.sh* will now run automatically at 01:00 a.m. every day and generate a file named *daily_filexch_counter_summary.html* in the directory given by LOGPATH. 
 
 Open this html file in your browser once a week or so to monitor the behaviour of FileExchange at a glance.
+
+## Caveat
+There appears to be a bug in SeaSonde's filexch_ssh.pl script that will sometimes result in an inaccurate count of the number of files transferred. This inaccurate count will appear in the output of the daily_filexch_counter.sh script. 
+
+The problem occurs when there is an empty string in the field corresponding to the <FilesBeginWith> key in a FileExchange .plist file. The workaround is not to have empty <FilesBeginWith> fields in the .plist files (it may also be sufficient to have no subdirectories in the remote data directories).
