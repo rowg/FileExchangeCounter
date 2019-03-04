@@ -17,6 +17,8 @@
 #
 # 2019-02-09, kpb--Created.
 #
+# 2019-03-04, kpb--Bugfix. Replaced use of rs with sed.
+#
 ################################################################
 
 echo $(date '+%Y-%m-%d %H:%M:%S'), $0--Starting. >&2
@@ -50,8 +52,12 @@ for f in ${inDir}/Site*.log; do
   fileTypes=$(echo ${fileTypes} $thisType)
 done
 
-fileTypes=$(echo $fileTypes | rs -T | sort -u)
-stationNames=$(echo $stationNames | rs -T | sort -u)
+# 2019-03-04, kpb--Workaround for bug in rs that garbles output if input is
+# larger than 1024 characters. Use "sed" instead.
+#fileTypes=$(echo $fileTypes | rs -T | sort -u)
+#stationNames=$(echo $stationNames | rs -T | sort -u)
+fileTypes=$(echo $fileTypes | sed -e $'s/ /\\\n/g' | sort -u)
+stationNames=$(echo $stationNames | sed -e $'s/ /\\\n/g' | sort -u)
 
 echo "<html>"
 echo "<head>"

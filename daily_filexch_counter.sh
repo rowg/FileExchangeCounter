@@ -85,6 +85,7 @@ for inFile in ${inDir}/Site*${yearMonthStr}.log; do
   outName=$(echo $b | awk -F _ '{printf "%s/%s_%s_%s_%s.log", x,$1,$2,$3,y}' x=$outDir y=$monthStr)
 
   # Call filexch_counter.sh for this day and this FileExchange log file.
+  echo $0--Calling filexch_counter.sh for day $dayStr and FileExchange log file $inFile
   numFiles=$(filexch_counter.sh $dayStr $inFile)
 
   # Append timestamped output to log file.
